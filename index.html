@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forcast</title>
+  <meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body onload="getContinents()">
+<!-- snezenie -->
+<div id="SnowFlake" class="snowflakes" aria-hidden="true" style="visibility: hidden;">
+  <div class="snowflake">❅</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake"> ❅</div>
+  <div class="snowflake"> ❆</div>
+  <div class="snowflake"> ❅</div>
+  <div class="snowflake"> ❆</div>
+  <div class="snowflake">  ❅</div>
+  <div class="snowflake"> ❆ </div>
+</div>
+
+<!-- uvodna -->
+<div id="mainAnim" class="wrapper">
+  <div class="sun"></div>
+  <div class="cloud">
+    <div class="cloud1">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="cloud1 c_shadow">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="cloud_s">
+    <div class="cloud1">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="cloud1 c_shadow">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="cloud_vs">
+    <div class="cloud1">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="cloud1 c_shadow">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+  <div class="thunder"></div>
+  <div class="rain">
+     <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+    </ul>
+  </div>
+  <div class="sleet">
+     <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+    </ul>
+  </div>
+</div>
+<header>
+	<b> Wheater Forcast </b>
+</header>
+<div id="mainDiv">
+	<table align="center">
+	<tr>
+    <td><label>Continent:</label></td>
+    <td><label>State:</label></td>
+		<td><label>Code: </label></td>
+		<td><label>City: </label></td>
+	</tr>
+	<tr>
+		<td><select id="continents" onchange="getStates()"></select></td>
+		<td><select id="states" onchange="getTowns()"></select></td>
+    <td><div id="code"></div></td>
+    <td><select id="towns"></select></td>
+		<td><button type="button" onclick="getWeather()">Click in</button></td>
+	</tr>
+	</table>
+</div>
+<div id="wrong" style="visibility: hidden;" align="center">There are any towns and citizens.</div>
+<div id="resultTable" style="visibility: hidden;">
+	<table align="center">
+		<tr align="center">
+			<td>Temperature</td>
+			<td>Humidity</td>
+			<td>Pressure</td>
+			<td>Wind</td>
+			<td>Wheater</td>
+		</tr>
+		<tr align="center">
+			<td><div id="teplota"></div></td>
+			<td><div id="vlhkost"></div></td>
+			<td><div id="tlak"></div></td>
+			<td><div id="vietor"></div></td>
+			<td><div id="pocasie"></div></td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>
+
+
+
